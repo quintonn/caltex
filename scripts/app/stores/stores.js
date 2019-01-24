@@ -9,7 +9,7 @@
         var self = this;
 
         self.items = [];
-        self.loading = true;
+        self.loading = false;
 
         self.selectItem = function (item)
         {
@@ -23,20 +23,14 @@
 
         self.$onInit = function ()
         {
-            self.loading = true;
+            //for (var i = 0; i < 20; i++)
+            //{
+            //    self.items.push({ Title: "Test #" + i, Description: "Description testing " + i, HasRead: i % 2 == 0 });
+            //}
+            self.items.push({ Title: "5th Avenue Service Station", Description: "5th Avenue, Lotus River" });
+            self.items.push({ Title: "9 Sefako Drive", Description: "9 Zambezi Drive, Rosslyn, Sinoville" });
 
-            setTimeout(function ()
-            {
-                //for (var i = 0; i < 20; i++)
-                //{
-                //    self.items.push({ Title: "Test #" + i, Description: "Description testing " + i, HasRead: i % 2 == 0 });
-                //}
-                self.items.push({ Title: "5th Avenue Service Station", Description: "5th Avenue, Lotus River" });
-                self.items.push({ Title: "9 Sefako Drive", Description: "9 Zambezi Drive, Rosslyn, Sinoville" });
 
-                self.loading = false;
-                $scope.$apply();
-            }, 3000);
         }
     }
 

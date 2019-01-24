@@ -7,12 +7,18 @@
     function StoreMapController(menuService, $scope, dialogService)
     {
         var self = this;
+        self.loading = false;
 
         self.items = [];
 
         self.$onInit = function ()
         {
-            
+            self.loading = true;
+            setTimeout(function ()
+            {
+                self.loading = false;
+                $scope.$apply();
+            }, 2000);
         }
     }
 
