@@ -9,11 +9,13 @@
         var self = this;
         self.loading = false;
 
-        self.items = [];
+        self.item = {};
 
         self.$onInit = function ()
         {
             self.loading = true;
+            
+            self.item = self.parameters.data;
             setTimeout(function ()
             {
                 self.loading = false;

@@ -159,13 +159,13 @@ header {
 
 
 .fullscreen-modal-button {
-    background-color: black;
-    color: #fff;
+    color: black;
+    background-color: #fff;
 }
 
     .fullscreen-modal-button:active {
         color: black;
-        background-color: #fff;
+        background-color: lightgray;
     }
 
     .menu-list > ul > li:hover {
